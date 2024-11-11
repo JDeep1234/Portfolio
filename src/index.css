@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-900;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .glitch-text {
+    position: relative;
+    animation: glitch 3s infinite;
+  }
+
+  .cyber-border {
+    position: relative;
+    border: 1px solid rgba(74, 222, 128, 0.2);
+  }
+
+  .cyber-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(74, 222, 128, 0.5);
+    animation: borderGlow 2s infinite;
+  }
+
+  .matrix-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-bg::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background: 
+      repeating-linear-gradient(
+        0deg,
+        rgba(74, 222, 128, 0.1) 0%,
+        rgba(74, 222, 128, 0.1) 1px,
+        transparent 1px,
+        transparent 30px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(74, 222, 128, 0.1) 0%,
+        rgba(74, 222, 128, 0.1) 1px,
+        transparent 1px,
+        transparent 30px
+      );
+    animation: matrixMove 30s linear infinite;
+  }
+
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .skill-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+
+  .skill-card:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 3px 0 0 rgba(255,0,0,0.5), -3px 0 0 rgba(0,255,0,0.5);
+  }
+  2% {
+    text-shadow: 3px 0 0 rgba(255,0,0,0.5), -3px 0 0 rgba(0,255,0,0.5);
+    transform: translate(2px,0);
+  }
+  4% {
+    text-shadow: -3px 0 0 rgba(255,0,0,0.5), 3px 0 0 rgba(0,255,0,0.5);
+  }
+  6% {
+    text-shadow: -3px 0 0 rgba(255,0,0,0.5), 3px 0 0 rgba(0,255,0,0.5);
+    transform: translate(-2px,0);
+  }
+  8% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(74, 222, 128, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.8);
+  }
+}
+
+@keyframes matrixMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: cursor 1s infinite step-end;
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.glowing-border {
+  border: 2px solid #39ff14; /* Neon green border */
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glowing-border:hover {
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.8), 0 0 30px #39ff14, 0 0 40px #39ff14;
+}
