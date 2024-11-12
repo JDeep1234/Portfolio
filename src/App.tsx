@@ -110,7 +110,7 @@ function App() {
       </section>
 
      {/* Contact Section */}
-<Section className="py-10">
+<Section id ="contact"className="py-10">
   <div className="max-w-4xl mx-auto text-center animate-on-scroll">
     <h2 className="text-3xl font-bold mb-8 flex items-center gap-3 justify-center">
       <Code className="w-8 h-8 text-neon-green" />
