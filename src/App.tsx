@@ -85,28 +85,29 @@ function App() {
             <Code className="text-green-500" />  
             Featured Projects  
           </h2>  
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">  
-            <ProjectCard  
-              title="SenSpy"  
-              description="Senspy is a network monitoring and anomaly detection tool built using Flask, Scapy, and Chart.js providing real-time insights into network traffic, anomaly analysis, and CPU usage through interactive charts and dashboards using machine learning analysis."  
-              tags={['Python', 'Flask','ML', 'Security']}  
-              image="https://assets.enterprisenetworkingplanet.com/uploads/2023/07/enp-network-monitoring-tools.png"  
-              github="https://github.com/JDeep1234/SenSpy"  
-            />  
-            <ProjectCard  
-              title="AIWrite - Intelligent Writing Assistant"  
-              description="An AI-powered writing assistant designed to boost productivity by generating, refining, and optimizing content across various formats with real-time suggestions and tone adjustments."  
-              tags={['AI', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Docker', 'OpenAI API']}  
-              image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  
-              github="https://github.com/JDeep1234/MernAi-Writing-Assistant"  
-            />  
-            <ProjectCard  
-              title="Advanced Financial Risk Assessment System"  
-              description="An advanced financial risk assessment system integrating a multimodal knowledge graph and Retrieval-Augmented Generation (RAG) for dynamic risk identification and decision support."  
-              tags={['Python', 'Machine Learning', 'Streamlit', 'RAG', 'Data Science', 'NetworkX']}  
-              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT1LNPmwHKK4pIQGGnRo2gnqjhIW9pMhQJUg4cCjML7cAkFrsIp0RtApSOB3YUcBjvoZE&usqp=CAU"  
-              github="https://github.com/JDeep1234/MARFIN-Multimodal-Anological-Reasoning-For-Financial-Risk-Identification-"  
-            />  
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">  
+  <ProjectCard  
+    title="AnomalyX – Real-Time Anomaly Detection Engine"  
+    description="Developed anomaly detection framework using TimeGPT and LSTM-based RNNs for streaming network telemetry with RAG-based interpretable alerts for enhanced security monitoring and threat identification."  
+    tags={['Python', 'TimeGPT', 'RNN', 'LSTM', 'InfluxDB', 'Elasticsearch', 'LangChain', 'Streamlit']}  
+    image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  
+    github="https://github.com/BipinRajC/AnomalyX"  
+  />  
+  <ProjectCard  
+    title="Quantum-Encrypted Military Wearable System"  
+    description="Developed a secure, real-time wearable device for soldiers that integrates with data encryption via quantum superdense coding. Created a Quantum algorithm to secure defense communications, solving real-world military security challenges and hackathon winner recognition."  
+    tags={['Algorithm', 'Python', 'VSD Squadron mini', 'Folium', 'Streamlit', 'Arduino', 'RISC-V', 'Quantum Cryptography']}  
+    image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  
+    github="https://github.com/JDeep1234/Soldiers-Health-Monitoring-and-GPS-Tracking-System"  
+  />  
+  <ProjectCard  
+    title="XOracleBench – Cross-Chain DeFi Protocol Benchmarking"  
+    description="Engineered benchmarking platform processing 50K+ TPS with sub-millisecond latency and 90% accuracy improvement for cross-chain DeFi protocols, enabling comprehensive performance analysis and optimization."  
+    tags={['TypeScript', 'Express.js', 'Blockchain APIs', 'Smart Contracts', 'System Design']}  
+    image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"  
+    github="https://github.com/JDeep1234/XOracleBench"  
+  />  
+</div>
           </div>  
         </div>  
       </section>  
